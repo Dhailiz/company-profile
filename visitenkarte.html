@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartflex GmbH - Company Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* shadow-xl */
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .header {
+            /* Enhanced gradient with more contrast and subtle shadow */
+            background: linear-gradient(135deg, #222222, #555555, #AAAAAA); /* Darker, more pronounced gradient */
+            padding: 3rem 2.5rem; /* Increased vertical padding for more space */
+            color: white;
+            text-align: center;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            position: relative; /* Needed for pseudo-element or subtle overlay */
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1); /* Subtle dark overlay for depth */
+            z-index: 1;
+        }
+        .header h1, .header p {
+            position: relative; /* Bring text above the overlay */
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for impact */
+        }
+        .header h1 {
+            font-size: 3rem; /* Larger font for main title */
+            line-height: 1.1; /* Adjust line height for better readability */
+            margin-bottom: 0.5rem; /* Re-added margin-bottom for subtitle spacing */
+        }
+        .header p {
+            font-size: 1.5rem; /* Larger font for subtitle */
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 2.5rem; /* p-10 */
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem; /* gap-8 */
+            justify-items: center;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+        .team-member {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 9999px; /* rounded-full */
+            object-fit: cover;
+            /* Border color adjusted to a darker grey to match new theme */
+            border: 4px solid #555555;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .team-member h3 {
+            margin-top: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #333;
+        }
+        .team-member p {
+            font-size: 0.95rem; /* text-sm */
+            color: #666;
+        }
+        .section-title {
+            font-size: 1.75rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Concise and impactful heading -->
+            <h1 class="text-4xl font-bold">Smartflex GmbH</h1>
+            <p class="text-xl">Your Smart Mirror. Your Future.</p>
+        </div>
+        <div class="content">
+            <div class="mb-8">
+                <h2 class="section-title">Our Team</h2>
+                <p class="text-center text-lg text-gray-700 max-w-2xl mx-auto">
+                    We are a young, motivated team of four students from Frankfurt, passionately working on Smirror.
+                    Each of us brings unique strengths and perspectives to turn our vision into reality.
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 - Replace src with your image URL -->
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150/555555/ffffff?text=Zakaria" alt="Team Member Zakaria">
+                    <h3>Zakaria</h3>
+                    <p>Co-Founder & CTO</p>
+                </div>
+                <!-- Team Member 2 - Replace src with your image URL -->
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150/888888/ffffff?text=Noah" alt="Team Member Noah">
+                    <h3>Noah</h3>
+                    <p>Co-Founder & Lead Developer</p>
+                </div>
+                <!-- Team Member 3 - Replace src with your image URL -->
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150/555555/ffffff?text=Enes" alt="Team Member Enes">
+                    <h3>Enes</h3>
+                    <p>Co-Founder & Design Lead</p>
+                </div>
+                <!-- Team Member 4 - Replace src with your image URL -->
+                <div class="team-member">
+                    <img src="https://placehold.co/150x150/888888/ffffff?text=Bjorn" alt="Team Member Björn">
+                    <h3>Björn</h3>
+                    <p>Co-Founder & Business Strategist</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <h2 class="section-title">Our Mission</h2>
+                <p class="text-center text-lg text-gray-700 max-w-2xl mx-auto">
+                    Smirror GmbH is a young tech start-up founded in Frankfurt by four students in 2024.
+                    Our goal is to enhance smart home living with useful and simple technology.
+                    We believe that mirrors can be more than just reflections. With smart technology and voice control,
+                    we aim to help people save time and stay organized every day.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
