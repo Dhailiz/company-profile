@@ -26,14 +26,19 @@
         }
         .header {
             /* Enhanced gradient with more contrast and subtle shadow */
-            background: linear-gradient(135deg, #222222, #555555, #AAAAAA); /* Darker, more pronounced gradient */
-            padding: 3rem 2.5rem; /* Increased vertical padding for more space */
+            /* Adjusted for better contrast with black logo: lighter start to darker end */
+            background: linear-gradient(135deg, #222222, #333, #555555); /* Lighter start to darker end */
+            padding: 2rem 2.5rem; /* Adjusted padding to make space for logo */
             color: white;
             text-align: center;
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
             position: relative; /* Needed for pseudo-element or subtle overlay */
             overflow: hidden;
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
         }
         .header::before {
             content: '';
@@ -45,19 +50,15 @@
             background: rgba(0, 0, 0, 0.1); /* Subtle dark overlay for depth */
             z-index: 1;
         }
-        .header h1, .header p {
-            position: relative; /* Bring text above the overlay */
+        .header .logo {
+            position: relative; /* Bring logo above the overlay */
             z-index: 2;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for impact */
-        }
-        .header h1 {
-            font-size: 3rem; /* Larger font for main title */
-            line-height: 1.1; /* Adjust line height for better readability */
-            margin-bottom: 0.5rem; /* Re-added margin-bottom for subtitle spacing */
-        }
-        .header p {
-            font-size: 1.5rem; /* Larger font for subtitle */
-            font-weight: 400;
+            max-width: 250px; /* Increased logo size */
+            height: auto;
+            border-radius: 0.25rem; /* Less rounded corners for a smoother blend */
+            box-shadow: none; /* Removed shadow for better blending */
+            /* Assuming the actual logo image will have transparency,
+               the background of the header will show through */
         }
 
         .content {
@@ -78,8 +79,8 @@
             align-items: center;
         }
         .team-member img {
-            width: 150px;
-            height: 150px;
+            width: 180px; /* Increased size for larger circles */
+            height: 180px; /* Increased size for larger circles */
             border-radius: 9999px; /* rounded-full */
             object-fit: cover;
             /* Border color adjusted to a darker grey to match new theme */
@@ -104,16 +105,62 @@
             text-align: center;
             padding-top: 1rem;
         }
+        .product-image-container {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .product-image {
+            max-width: 80%; /* Adjust as needed */
+            height: auto;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            display: block; /* Ensures margin:auto works for centering */
+            margin: 0 auto; /* Centers the image horizontally */
+        }
+        .contact-info {
+            background-color: #f8f8f8;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        .contact-info p {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        .contact-info a {
+            color: #222222;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #555555;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <!-- Concise and impactful heading -->
-            <h1 class="text-4xl font-bold">Smartflex GmbH</h1>
-            <p class="text-xl">Your Smart Mirror. Your Future.</p>
+            <!-- Logo Placeholder (h1 and p tags removed) -->
+            <!-- IMPORTANT: Replace 'https://placehold.co/...' with the direct URL of your logo (ideally with a transparent background for best blending) -->
+            <img src="img/Smirror-logo.png" alt="Smartflex GmbH Logo" class="logo">
         </div>
+
         <div class="content">
+            <!-- Smirror Product Image Section -->
+            <div class="product-image-container">
+                <img src="img/produkt1.png" alt="Smirror Product Image" class="product-image">
+                <p class="text-center text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
+                    Smirror is your voice-controlled, AI-powered smart mirror, offering personalized information,
+                    outfit suggestions, and media playback to simplify your daily routine.
+                </p>
+            </div>
+
             <div class="mb-8">
                 <h2 class="section-title">Our Team</h2>
                 <p class="text-center text-lg text-gray-700 max-w-2xl mx-auto">
@@ -123,29 +170,29 @@
             </div>
 
             <div class="team-grid">
-                <!-- Team Member 1 - Replace src with your image URL -->
+                <!-- Team Member 1 - Paste your image/Bitmoji URL here -->
                 <div class="team-member">
-                    <img src="https://placehold.co/150x150/555555/ffffff?text=Zakaria" alt="Team Member Zakaria">
+                    <img src="img/Image (3).jpeg" alt="Team Member Zakaria">
                     <h3>Zakaria</h3>
-                    <p>Co-Founder & CTO</p>
+                    <p>???</p> <!-- Placeholder for role -->
                 </div>
-                <!-- Team Member 2 - Replace src with your image URL -->
+                <!-- Team Member 2 - Paste your image/Bitmoji URL here -->
                 <div class="team-member">
-                    <img src="https://placehold.co/150x150/888888/ffffff?text=Noah" alt="Team Member Noah">
+                    <img src="https://placehold.co/180x180/888888/ffffff?text=Noah" alt="Team Member Noah">
                     <h3>Noah</h3>
-                    <p>Co-Founder & Lead Developer</p>
+                    <p>???</p> <!-- Placeholder for role -->
                 </div>
-                <!-- Team Member 3 - Replace src with your image URL -->
+                <!-- Team Member 3 - Paste your image/180x180/Bitmoji URL here -->
                 <div class="team-member">
-                    <img src="https://placehold.co/150x150/555555/ffffff?text=Enes" alt="Team Member Enes">
+                    <img src="https://placehold.co/180x180/555555/ffffff?text=Enes" alt="Team Member Enes">
                     <h3>Enes</h3>
-                    <p>Co-Founder & Design Lead</p>
+                    <p>???</p> <!-- Placeholder for role -->
                 </div>
-                <!-- Team Member 4 - Replace src with your image URL -->
+                <!-- Team Member 4 - Paste your image/Bitmoji URL here -->
                 <div class="team-member">
-                    <img src="https://placehold.co/150x150/888888/ffffff?text=Bjorn" alt="Team Member Björn">
+                    <img src="https://placehold.co/180x180/888888/ffffff?text=Bjorn" alt="Team Member Björn">
                     <h3>Björn</h3>
-                    <p>Co-Founder & Business Strategist</p>
+                    <p>???</p> <!-- Placeholder for role -->
                 </div>
             </div>
 
@@ -157,6 +204,15 @@
                     We believe that mirrors can be more than just reflections. With smart technology and voice control,
                     we aim to help people save time and stay organized every day.
                 </p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h2 class="section-title text-center">Get in Touch</h2>
+                <p>Email: <a href="mailto:info@smartflex.com">info@smartflex.com</a></p>
+                <p>Website: <a href="https://www.smartflex.com" target="_blank">www.smartflex.com</a></p>
+                <p>Phone: <a href="tel:+49123456789">+49 (0)123 456789</a></p>
+                <p>Follow us on Social Media: <a href="https://twitter.com/smartflexgmbh" target="_blank">Twitter</a> | <a href="https://linkedin.com/company/smartflexgmbh" target="_blank">Instagram</a></p>
             </div>
         </div>
     </div>
